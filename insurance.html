@@ -80,12 +80,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-.insurance-top { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: clamp(40px, 7vw, 90px); padding: 72px 0 58px; align-items: stretch; }
-.insurance-copy { display: flex; flex-direction: column; justify-content: center; padding-block: 24px; }
+.insurance-top { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, .95fr); gap: clamp(40px, 7vw, 90px); padding: 72px 0 58px; align-items: start; }
+.insurance-copy { padding-block: 0; }
 .insurance-copy h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.1; margin-bottom: 18px; }
 .insurance-copy > p { font-size: 15px; line-height: 1.75; max-width: 62ch; margin-bottom: 24px; }
 .direct-note { margin-top: 16px; font-size: 12.5px !important; }
-.booking-card { height: 100%; padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.booking-card { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
 .booking-card h2 { font-size: 30px; margin-bottom: 20px; }
 .faq-item { margin-bottom: 18px; }
 .faq-item h3 { font-family: var(--font-body); font-size: 14px; margin-bottom: 5px; }
