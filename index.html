@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>D. Ware | Tech, Security &amp; Insurance</title>
-<meta name="description" content="Meet Deja “D” Ware—software and security builder, insurance professional, and Prairie View A&amp;M University senior.">
+<meta name="description" content="Deja “D” Ware combines cybersecurity, technology, and insurance to help people make informed decisions.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="D. Ware | Tech, Security &amp; Insurance">
-<meta property="og:description" content="Protecting systems. Protecting families. Teaching people something new in both.">
+<meta property="og:description" content="Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions.">
 <meta property="og:image" content="images/headshot.png">
 <meta property="og:image:alt" content="Portrait of Deja Ware">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -105,11 +105,34 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
   h1.name { font-size: clamp(34px, 6vw, 54px); line-height: 1.05; margin-bottom: 10px; }
   .tagline { color: var(--ink-dim); font-size: 15.5px; max-width: 46ch; line-height: 1.55; }
 
-  .about-strip {
-    max-width: 68ch; padding: 0 clamp(20px, 6vw, 64px) 48px;
-    font-size: 14.5px; line-height: 1.7; color: var(--ink-dim);
+  .about-section {
+    max-width: 76ch; padding: 0 clamp(20px, 6vw, 64px) 48px;
   }
-  .about-strip b { color: var(--ink); }
+  .about-section h2, .professional-links h2 {
+    font-size: clamp(24px, 3vw, 32px); margin-bottom: 18px;
+  }
+  .about-section p {
+    font-size: 14.5px; line-height: 1.75; color: var(--ink-dim); margin-bottom: 16px;
+  }
+  .about-section p:last-child { margin-bottom: 0; }
+
+  .professional-links { padding: 0 clamp(20px, 6vw, 64px) 48px; }
+  .professional-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px;
+  }
+  .professional-card {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+    border: 1px solid var(--line); border-radius: 14px; padding: 22px; background: var(--panel);
+  }
+  .professional-card p { color: var(--ink-dim); font-size: 13.5px; line-height: 1.6; flex: 1; }
+  .professional-link {
+    display: inline-flex; padding: 11px 18px; border-radius: 9px; font-family: var(--font-tech);
+    font-size: 12.5px; font-weight: 600; text-decoration: none;
+  }
+  .professional-link.primary-link { background: var(--accent); color: var(--btn-ink); }
+  .professional-link.secondary-link { border: 1px solid var(--line); color: var(--ink); }
+  .professional-link.is-placeholder { opacity: 0.7; cursor: not-allowed; }
+  @media (max-width: 720px) { .professional-grid { grid-template-columns: 1fr; } }
 
   .doors {
     display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
@@ -123,6 +146,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
     background: var(--panel); transition: transform 0.15s ease, border-color 0.15s ease;
   }
   .door:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .door:focus-visible, .professional-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
   .door .door-tag {
     font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
@@ -150,29 +174,49 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
   <div class="hero">
     <div class="headshot-slot"><img src="images/headshot.png" alt="Deja Ware"></div>
     <div class="hero-text">
-      <div class="eyebrow">Tap the card</div>
+      <div class="eyebrow">Deja Ware</div>
       <h1 class="name">D. Ware</h1>
-      <p class="tagline">Protecting systems. Protecting families. Teaching people something new in both.</p>
+      <p class="tagline">Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions.</p>
     </div>
   </div>
 
-  <p class="about-strip">
-    I'm Deja Ware — goes by <b>D</b>. Two lanes, one person: I build and monitor systems on the tech
-    side, and I help families get properly protected on the insurance side. Same instinct either way —
-    catch the thing before it becomes a problem, and explain it in plain language once I have.
-  </p>
+  <section class="about-section" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Me</h2>
+    <p>I’m Deja Ware, but most people call me D. I’m a computer science student, cybersecurity professional, licensed insurance agent, and emerging entrepreneur who genuinely enjoys helping people feel more informed, prepared, and protected.</p>
+    <p>Cybersecurity is at the center of what I do. I am interested in securing systems, identifying risks early, and creating solutions that protect the people who depend on technology every day. That same mindset carries into my work in insurance, where I help individuals and families understand their options, prepare for the unexpected, and make confident decisions about their future.</p>
+    <p>My work also reflects my interest in leadership, education, entrepreneurship, and innovation. I believe valuable ideas can come from anywhere when we are willing to look closely, question what already exists, and think creatively about how things could work better.</p>
+    <p>Although my interests may appear in different forms, they are connected by one purpose: protecting what matters, solving important problems, and using what I learn to create opportunities for others.</p>
+  </section>
+
+  <section class="professional-links" aria-labelledby="professional-links-heading">
+    <h2 id="professional-links-heading">Learn More About My Work</h2>
+    <div class="professional-grid">
+      <article class="professional-card">
+        <h3>LinkedIn</h3>
+        <p>Visit my LinkedIn to follow my professional journey, current roles, certifications, leadership experience, and the projects I am continuing to build.</p>
+        <!-- TODO: Replace with [INSERT LINKEDIN URL]. -->
+        <span class="professional-link primary-link is-placeholder" aria-disabled="true" data-placeholder="[INSERT LINKEDIN URL]">View LinkedIn</span>
+      </article>
+      <article class="professional-card">
+        <h3>Resume</h3>
+        <p>View my resume for a complete overview of my technical skills, professional experience, education, certifications, leadership, and accomplishments.</p>
+        <!-- TODO: Replace with [INSERT RESUME FILE OR URL] and use target="_blank". -->
+        <span class="professional-link secondary-link is-placeholder" aria-disabled="true" data-placeholder="[INSERT RESUME FILE OR URL]">View Resume</span>
+      </article>
+    </div>
+  </section>
 
   <div class="doors">
     <a class="door" href="tech.html">
-      <div class="door-tag">Lane 01</div>
+      <div class="door-tag">Cybersecurity &amp; Technology</div>
       <h2>Tech</h2>
-      <p>Featured projects — FLARE, hackathon work, and what I'm building next in security monitoring.</p>
+      <p>See how cybersecurity connects my work in software, monitoring, research, and emerging technology.</p>
       <div class="go">Enter &rarr;</div>
     </a>
     <a class="door" href="insurance.html">
-      <div class="door-tag">Lane 02</div>
+      <div class="door-tag">Insurance &amp; Planning</div>
       <h2>Insurance</h2>
-      <p>See if you qualify for no-cost benefits and life insurance that actually protects your family.</p>
+      <p>Learn about coverage options, preparation resources, and ways to make informed decisions for your family.</p>
       <div class="go">Enter &rarr;</div>
     </a>
   </div>
