@@ -115,9 +115,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .professional-card h3 { font-size: 23px; margin-bottom: 10px; }
 .professional-card p { font-size: 13.5px; line-height: 1.65; flex: 1; }
 .professional-card .button { align-self: flex-start; margin-top: 18px; }
-.quote-section { padding: 80px 0 38px; border-top: 1px solid var(--line); }
-.quote-section blockquote { max-width: 1040px; font-family: var(--font-display); font-size: clamp(27px, 4.2vw, 48px); line-height: 1.35; }
-.quote-section cite { display: block; margin-top: 20px; font-family: var(--font-tech); font-size: 13px; color: var(--ink-dim); font-style: normal; }
+.quote-section { padding: 80px 0 38px; border-top: 1px solid var(--line); text-align: center; }
+.quote-section blockquote { max-width: 1040px; margin-inline: auto; font-family: var(--font-display); font-size: clamp(27px, 4.2vw, 48px); line-height: 1.35; text-wrap: balance; }
+.quote-section cite { display: block; margin-top: 20px; font-family: var(--font-tech); font-size: 13px; color: var(--ink-dim); font-style: normal; text-align: center; }
 @media (max-width: 820px) { .hero, .about-section { grid-template-columns: 1fr; } .hero { gap: 20px; padding-top: 42px; } .hero-photo { min-height: 340px; } .hero-photo img { max-height: 430px; } .doors, .professional-grid { grid-template-columns: 1fr; } .about-section { gap: 26px; } }
 </style></head><body>
 <header class="topbar">
@@ -143,16 +143,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
   <section class="professional-section" aria-labelledby="professional-title"><div class="eyebrow">Professional Links</div><h2 id="professional-title">Learn More About My Work</h2><p>Choose the resource that best fits what you would like to learn.</p>
     <div class="professional-grid">
       <article class="professional-card primary-resource"><h3>LinkedIn</h3><p>Follow my professional journey, current roles, certifications, leadership experience, accomplishments, and the projects I am continuing to build.</p><a class="button primary" href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">View LinkedIn</a></article>
-      <article class="professional-card primary-resource"><h3>Resume</h3><p>View a structured overview of my technical skills, professional experience, education, certifications, leadership, and accomplishments.</p><!-- TODO: Replace with [INSERT RESUME FILE OR PUBLIC VIEW URL]. --><span class="button secondary disabled" aria-disabled="true">View Resume</span></article>
+      <article class="professional-card primary-resource"><h3>Resume</h3><p>View a structured overview of my technical skills, professional experience, education, certifications, leadership, and accomplishments.</p><a class="button secondary" href="assets/Deja_Ware_Cyber_Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a></article>
       <article class="professional-card"><h3>GitHub</h3><p>Explore my repositories, technical projects, experiments, coursework, and ongoing development work.</p><a class="button secondary" href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">View GitHub</a></article>
-      <article class="professional-card"><h3>Professional Instagram</h3><p>Follow my student work, technology, leadership, insurance, professional development, and career updates.</p><a class="button secondary" href="https://www.instagram.com/dwarelhq_" target="_blank" rel="noopener noreferrer">View Instagram</a></article>
+      <article class="professional-card"><h3>Professional Instagram</h3><p>Follow my student work, technology, leadership, insurance, professional development, and career updates.</p><a class="button secondary" href="https://www.instagram.com/dwarehq_" target="_blank" rel="noopener noreferrer">View Instagram</a></article>
     </div>
   </section>
   <section class="quote-section" aria-label="Closing quotation"><blockquote>Don&rsquo;t let anyone rob you of your imagination, your creativity, or your curiosity. It&rsquo;s your place in the world; it&rsquo;s your life. Go on and do all you can with it, and make it the life you want to live.</blockquote><cite>Mae Jemison</cite></section>
 </main><footer class="site-footer">
   <div class="container footer-inner">
     <div><div class="footer-name">D. Ware</div><p class="footer-tagline">Cybersecurity &bull; Technology &bull; Insurance &bull; Leadership</p><p class="footer-note">Tap, scan, or visit this site to connect.</p><!-- TODO: Add [INSERT FINAL PORTFOLIO URL] when published. --></div>
-    <div class="footer-links"><a href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/dwarelhq_" target="_blank" rel="noopener noreferrer">Instagram</a><span class="disabled" aria-disabled="true">Resume</span></div>
+    <div class="footer-links"><a href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/dwarehq_" target="_blank" rel="noopener noreferrer">Instagram</a><a href="assets/Deja_Ware_Cyber_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div>
   </div>
 </footer><script>
   function toggleTheme() {
