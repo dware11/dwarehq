@@ -117,7 +117,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .professional-card .button { align-self: flex-start; margin-top: 18px; }
 .quote-section { padding: 80px 0 38px; border-top: 1px solid var(--line); text-align: center; }
 .quote-section blockquote { max-width: 1040px; margin-inline: auto; font-family: var(--font-display); font-size: clamp(27px, 4.2vw, 48px); line-height: 1.35; text-wrap: balance; }
-.quote-section cite { display: block; margin-top: 20px; font-family: var(--font-tech); font-size: 13px; color: var(--ink-dim); font-style: normal; text-align: center; }
+.quote-section cite { display: block; margin-top: 24px; font-family: var(--font-tech); color: var(--ink-dim); font-style: normal; text-align: center; }
+.quote-section cite strong { display: block; color: var(--ink); font-size: 17px; margin-bottom: 6px; }
+.quote-section cite span { display: block; font-size: 12.5px; line-height: 1.5; }
 @media (max-width: 820px) { .hero, .about-section { grid-template-columns: 1fr; } .hero { gap: 20px; padding-top: 42px; } .hero-photo { min-height: 340px; } .hero-photo img { max-height: 430px; } .doors, .professional-grid { grid-template-columns: 1fr; } .about-section { gap: 26px; } }
 </style></head><body>
 <header class="topbar">
@@ -148,7 +150,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
       <article class="professional-card"><h3>Professional Instagram</h3><p>Follow my student work, technology, leadership, insurance, professional development, and career updates.</p><a class="button secondary" href="https://www.instagram.com/dwarehq_" target="_blank" rel="noopener noreferrer">View Instagram</a></article>
     </div>
   </section>
-  <section class="quote-section" aria-label="Closing quotation"><blockquote>Don&rsquo;t let anyone rob you of your imagination, your creativity, or your curiosity. It&rsquo;s your place in the world; it&rsquo;s your life. Go on and do all you can with it, and make it the life you want to live.</blockquote><cite>Mae Jemison</cite></section>
+  <section class="quote-section" aria-label="Closing quotation"><blockquote>&ldquo;Don&rsquo;t let anyone rob you of your imagination, your creativity, or your curiosity. It&rsquo;s your place in the world; it&rsquo;s your life. Go on and do all you can with it, and make it the life you want to live.&rdquo;</blockquote><cite><strong>Mae Jemison</strong><span>Engineer, physician, and former NASA astronaut</span></cite></section>
 </main><footer class="site-footer">
   <div class="container footer-inner">
     <div><div class="footer-name">D. Ware</div><p class="footer-tagline">Cybersecurity &bull; Technology &bull; Insurance &bull; Leadership</p><p class="footer-note">Tap, scan, or visit this site to connect.</p><!-- TODO: Add [INSERT FINAL PORTFOLIO URL] when published. --></div>
