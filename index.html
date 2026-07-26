@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D. Ware | Tech, Security &amp; Insurance</title>
+<meta name="description" content="Meet Deja “D” Ware—software and security builder, insurance professional, and Prairie View A&amp;M University senior.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="D. Ware | Tech, Security &amp; Insurance">
+<meta property="og:description" content="Protecting systems. Protecting families. Teaching people something new in both.">
+<meta property="og:image" content="images/headshot.jpg">
+<meta property="og:image:alt" content="Portrait of Deja Ware">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+/* ============ Shared theme + layout for De's site ============ */
+
+:root {
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-tech: 'Space Grotesk', 'IBM Plex Mono', monospace;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+
+/* LIGHT — cool & technical */
+html[data-theme="light"] {
+  --bg: #E4E8ED; --panel: #F5F7F9; --ink: #1E2733; --ink-dim: #5B6774;
+  --accent: #3E6E8E; --accent-2: #8C5A3C; --line: rgba(30,39,51,0.14);
+  --card-ink: #1E2733; --btn-ink: #F5F7F9;
+}
+
+/* DARK — bold high-contrast */
+html[data-theme="dark"] {
+  --bg: #0B0B0C; --panel: #141416; --ink: #F5F3EE; --ink-dim: #8C8B87;
+  --accent: #00C2FF; --accent-2: #E8B23D; --line: rgba(245,243,238,0.14);
+  --card-ink: #F5F3EE; --btn-ink: #0B0B0C;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+a { color: inherit; }
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px clamp(20px, 6vw, 64px); border-bottom: 1px solid var(--line);
+}
+.topbar .logo { font-family: var(--font-tech); font-weight: 600; font-size: 15px; letter-spacing: 0.04em; text-decoration:none; }
+.topbar nav { display: flex; align-items: center; gap: 26px; }
+.topbar nav a {
+  font-family: var(--font-tech); font-size: 12.5px; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--ink-dim); text-decoration: none;
+  border-bottom: 1px solid transparent; padding-bottom: 2px;
+}
+.topbar nav a:hover, .topbar nav a.current { color: var(--ink); border-color: var(--accent); }
+.topbar .cta {
+  font-family: var(--font-tech); font-size: 12px; letter-spacing: 0.04em;
+  text-transform: uppercase; padding: 9px 16px; border-radius: 8px;
+  background: var(--accent); color: var(--btn-ink); text-decoration: none;
+}
+.theme-toggle {
+  font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.05em;
+  text-transform: uppercase; padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: transparent; color: var(--ink-dim); cursor: pointer;
+}
+
+.eyebrow {
+  font-family: var(--font-tech); letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 11.5px; color: var(--accent); margin-bottom: 10px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+
+.wrap { padding: 0 clamp(20px, 6vw, 64px); }
+
+.gh-cta, .primary-cta {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-tech);
+  font-size: 13px; text-decoration: none; padding: 13px 22px; border-radius: 10px;
+  background: var(--accent); color: var(--btn-ink); font-weight: 600;
+}
+.secondary-cta {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-tech);
+  font-size: 13px; text-decoration: none; padding: 12px 20px; border-radius: 10px;
+  border: 1px solid var(--line); color: var(--ink);
+}
+
+.note { font-size: 12.5px; color: var(--ink-dim); line-height: 1.5; }
+
+</style>
+<style>
+  .hero {
+    display: grid; grid-template-columns: 1.1fr 1.4fr; gap: 40px;
+    align-items: end; padding: 56px clamp(20px, 6vw, 64px) 44px;
+  }
+  @media (max-width: 720px) { .hero { grid-template-columns: 1fr; } }
+
+  .headshot-slot {
+    justify-self: start; width: 180px; height: 220px; border-radius: 14px;
+    overflow: hidden; border: 1px solid var(--line); transform: translateY(10px);
+  }
+  .headshot-slot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+
+  h1.name { font-size: clamp(34px, 6vw, 54px); line-height: 1.05; margin-bottom: 10px; }
+  .tagline { color: var(--ink-dim); font-size: 15.5px; max-width: 46ch; line-height: 1.55; }
+
+  .about-strip {
+    max-width: 68ch; padding: 0 clamp(20px, 6vw, 64px) 48px;
+    font-size: 14.5px; line-height: 1.7; color: var(--ink-dim);
+  }
+  .about-strip b { color: var(--ink); }
+
+  .doors {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    padding: 0 clamp(20px, 6vw, 64px) 72px;
+  }
+  @media (max-width: 720px) { .doors { grid-template-columns: 1fr; } }
+
+  .door {
+    display: block; text-decoration: none; color: var(--card-ink);
+    border: 1px solid var(--line); border-radius: 16px; padding: 30px;
+    background: var(--panel); transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .door:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .door .door-tag {
+    font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+  }
+  .door h2 { font-family: var(--font-tech); font-size: 22px; margin-bottom: 8px; }
+  .door p { font-size: 13.5px; color: var(--ink-dim); line-height: 1.5; margin-bottom: 16px; }
+  .door .go { font-family: var(--font-tech); font-size: 12.5px; color: var(--accent); }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="logo" href="index.html">D. WARE</a>
+    <nav>
+      <a href="index.html" class="current">Home</a>
+      <a href="tech.html">Tech</a>
+      <a href="insurance.html">Insurance</a>
+    </nav>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" onclick="toggleTheme()">Dark mode</button>
+      <a class="cta" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener">Book a call</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="headshot-slot"><img src="images/headshot.jpg" alt="Deja Ware"></div>
+    <div class="hero-text">
+      <div class="eyebrow">Tap the card</div>
+      <h1 class="name">D. Ware</h1>
+      <p class="tagline">Protecting systems. Protecting families. Teaching people something new in both.</p>
+    </div>
+  </div>
+
+  <p class="about-strip">
+    I'm Deja Ware — goes by <b>D</b>. Two lanes, one person: I build and monitor systems on the tech
+    side, and I help families get properly protected on the insurance side. Same instinct either way —
+    catch the thing before it becomes a problem, and explain it in plain language once I have.
+  </p>
+
+  <div class="doors">
+    <a class="door" href="tech.html">
+      <div class="door-tag">Lane 01</div>
+      <h2>Tech</h2>
+      <p>Featured projects — FLARE, hackathon work, and what I'm building next in security monitoring.</p>
+      <div class="go">Enter &rarr;</div>
+    </a>
+    <a class="door" href="insurance.html">
+      <div class="door-tag">Lane 02</div>
+      <h2>Insurance</h2>
+      <p>See if you qualify for no-cost benefits and life insurance that actually protects your family.</p>
+      <div class="go">Enter &rarr;</div>
+    </a>
+  </div>
+
+<script>
+  function toggleTheme(){
+    const html = document.documentElement;
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.querySelector('.theme-toggle').textContent = next === 'light' ? 'Dark mode' : 'Light mode';
+  }
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme ||
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initialTheme);
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.theme-toggle').textContent =
+      initialTheme === 'light' ? 'Dark mode' : 'Light mode';
+  });
+</script>
+
+</body>
+</html>

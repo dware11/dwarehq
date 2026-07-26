@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance &amp; Family Protection | D. Ware</title>
+<meta name="description" content="Book a no-cost, no-obligation benefits and life insurance consultation with Deja “D” Ware.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Insurance &amp; Family Protection | D. Ware">
+<meta property="og:description" content="See what benefits and family-protection options you qualify for in a plain-language consultation.">
+<meta property="og:image" content="images/headshot.jpg">
+<meta property="og:image:alt" content="Portrait of Deja Ware">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+/* ============ Shared theme + layout for De's site ============ */
+
+:root {
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-tech: 'Space Grotesk', 'IBM Plex Mono', monospace;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+
+/* LIGHT — cool & technical */
+html[data-theme="light"] {
+  --bg: #E4E8ED; --panel: #F5F7F9; --ink: #1E2733; --ink-dim: #5B6774;
+  --accent: #3E6E8E; --accent-2: #8C5A3C; --line: rgba(30,39,51,0.14);
+  --card-ink: #1E2733; --btn-ink: #F5F7F9;
+}
+
+/* DARK — bold high-contrast */
+html[data-theme="dark"] {
+  --bg: #0B0B0C; --panel: #141416; --ink: #F5F3EE; --ink-dim: #8C8B87;
+  --accent: #00C2FF; --accent-2: #E8B23D; --line: rgba(245,243,238,0.14);
+  --card-ink: #F5F3EE; --btn-ink: #0B0B0C;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+a { color: inherit; }
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px clamp(20px, 6vw, 64px); border-bottom: 1px solid var(--line);
+}
+.topbar .logo { font-family: var(--font-tech); font-weight: 600; font-size: 15px; letter-spacing: 0.04em; text-decoration:none; }
+.topbar nav { display: flex; align-items: center; gap: 26px; }
+.topbar nav a {
+  font-family: var(--font-tech); font-size: 12.5px; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--ink-dim); text-decoration: none;
+  border-bottom: 1px solid transparent; padding-bottom: 2px;
+}
+.topbar nav a:hover, .topbar nav a.current { color: var(--ink); border-color: var(--accent); }
+.topbar .cta {
+  font-family: var(--font-tech); font-size: 12px; letter-spacing: 0.04em;
+  text-transform: uppercase; padding: 9px 16px; border-radius: 8px;
+  background: var(--accent); color: var(--btn-ink); text-decoration: none;
+}
+.theme-toggle {
+  font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.05em;
+  text-transform: uppercase; padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: transparent; color: var(--ink-dim); cursor: pointer;
+}
+
+.eyebrow {
+  font-family: var(--font-tech); letter-spacing: 0.16em; text-transform: uppercase;
+  font-size: 11.5px; color: var(--accent); margin-bottom: 10px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+
+.wrap { padding: 0 clamp(20px, 6vw, 64px); }
+
+.gh-cta, .primary-cta {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-tech);
+  font-size: 13px; text-decoration: none; padding: 13px 22px; border-radius: 10px;
+  background: var(--accent); color: var(--btn-ink); font-weight: 600;
+}
+.secondary-cta {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-tech);
+  font-size: 13px; text-decoration: none; padding: 12px 20px; border-radius: 10px;
+  border: 1px solid var(--line); color: var(--ink);
+}
+
+.note { font-size: 12.5px; color: var(--ink-dim); line-height: 1.5; }
+
+</style>
+<style>
+  .page-hero { padding: 56px clamp(20px, 6vw, 64px) 20px; max-width: 62ch; }
+  .page-hero h1 { font-size: clamp(28px, 4.5vw, 40px); line-height: 1.1; margin-bottom: 14px; }
+  .page-hero p { color: var(--ink-dim); font-size: 15.5px; line-height: 1.6; margin-bottom: 26px; }
+
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 10px; }
+  .cta-row .note { align-self: center; }
+
+  .proof-strip {
+    padding: 40px clamp(20px, 6vw, 64px);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-top: 20px;
+  }
+  .proof-strip .kicker {
+    font-family: var(--font-tech); font-size: 11.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-dim); margin-bottom: 18px;
+  }
+  .benefit-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px;
+  }
+  .benefit-card { border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: var(--panel); }
+  .benefit-card .mark { font-family: var(--font-tech); font-size: 11px; color: var(--accent); margin-bottom: 6px; display:block; }
+  .benefit-card b { display: block; font-size: 14.5px; margin-bottom: 4px; }
+  .benefit-card span.desc { font-size: 13px; color: var(--ink-dim); line-height: 1.4; }
+
+  .faq-block { padding: 44px clamp(20px, 6vw, 64px) 30px; max-width: 62ch; }
+  .faq-block h2 { font-family: var(--font-tech); font-size: 18px; margin-bottom: 18px; }
+  .faq-item { margin-bottom: 16px; }
+  .faq-item b { display: block; font-size: 14px; margin-bottom: 3px; }
+  .faq-item span { font-size: 13.5px; color: var(--ink-dim); line-height: 1.5; }
+
+  .final-cta { padding: 10px clamp(20px, 6vw, 64px) 80px; }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="logo" href="index.html">D. WARE</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tech.html">Tech</a>
+      <a href="insurance.html" class="current">Insurance</a>
+    </nav>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" onclick="toggleTheme()">Dark mode</button>
+      <a class="cta" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener">Book now</a>
+    </div>
+  </div>
+
+  <div class="page-hero">
+    <div class="eyebrow">Lane 02</div>
+    <h1>See if you qualify to protect your family today.</h1>
+    <p>Fifteen minutes, no cost, no obligation. I'll walk you through what you already qualify for and what your options actually look like — plain language, no pressure.</p>
+    <div class="cta-row">
+      <a class="primary-cta" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener">See if you qualify &rarr;</a>
+      <a class="secondary-cta" href="#whats-included">What's included &darr;</a>
+    </div>
+    <p class="note">If my calendar's full, reach out directly and I'll find time — text, call, or email.</p>
+  </div>
+
+  <div class="proof-strip" id="whats-included">
+    <div class="kicker">Every meeting includes access to these — at no cost, whether or not you move forward</div>
+    <div class="benefit-grid">
+      <div class="benefit-card"><span class="mark">01</span><b>Will &amp; Testament Kit</b><span class="desc">Free, no strings attached.</span></div>
+      <div class="benefit-card"><span class="mark">02</span><b>AIL Plus Discount Card</b><span class="desc">Reduced rates on everyday health services.</span></div>
+      <div class="benefit-card"><span class="mark">03</span><b>Family Information Guide</b><span class="desc">Plain-language planning resource.</span></div>
+      <div class="benefit-card"><span class="mark">04</span><b>$2,000 AD&amp;D Coverage</b><span class="desc">Complimentary, just for meeting.</span></div>
+      <div class="benefit-card"><span class="mark">05</span><b>Financial Planning Guide</b><span class="desc">Plus a check on whether you qualify for union member rates.</span></div>
+    </div>
+  </div>
+
+  <div class="faq-block">
+    <h2>Before you book</h2>
+    <div class="faq-item"><b>Does this cost anything?</b><span>No. The meeting, the kit, the guides — all of it is complimentary, whether or not you end up getting coverage.</span></div>
+    <div class="faq-item"><b>Am I obligated to buy something?</b><span>No. Plenty of people book just for the Will Kit or the discount card and stop there.</span></div>
+    <div class="faq-item"><b>What actually happens on the call?</b><span>I'll ask a few questions about your situation, show you what you likely qualify for, and answer whatever you're actually wondering about.</span></div>
+  </div>
+
+  <div class="final-cta">
+    <a class="primary-cta" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener">Book your free meeting &rarr;</a>
+  </div>
+
+<script>
+  function toggleTheme(){
+    const html = document.documentElement;
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.querySelector('.theme-toggle').textContent = next === 'light' ? 'Dark mode' : 'Light mode';
+  }
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme ||
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', initialTheme);
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.theme-toggle').textContent =
+      initialTheme === 'light' ? 'Dark mode' : 'Light mode';
+  });
+</script>
+
+</body>
+</html>
