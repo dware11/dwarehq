@@ -1,228 +1,161 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D. Ware | Tech, Security &amp; Insurance</title>
-<meta name="description" content="Deja “D” Ware combines cybersecurity, technology, and insurance to help people make informed decisions.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="D. Ware | Tech, Security &amp; Insurance">
-<meta property="og:description" content="Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions.">
-<meta property="og:image" content="images/headshot.png">
-<meta property="og:image:alt" content="Portrait of Deja Ware">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<style>
-/* ============ Shared theme + layout for De's site ============ */
-
+<html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D. Ware | Cybersecurity, Technology &amp; Insurance</title>
+<meta name="description" content="Deja D. Ware brings together cybersecurity, technology, insurance, leadership, and service in one professional home.">
+<meta property="og:type" content="website"><meta property="og:title" content="D. Ware | Cybersecurity, Technology &amp; Insurance"><meta property="og:description" content="Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions."><meta property="og:image" content="images/headshot.png"><meta property="og:image:alt" content="Portrait of Deja Ware">
+<!-- TODO: Add canonical URL using [INSERT FINAL PORTFOLIO URL]. --><!-- TODO: Replace the headshot with [INSERT SOCIAL PREVIEW IMAGE] when available. -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><style>/* Shared visual system */
 :root {
   --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
   --font-tech: 'Space Grotesk', 'IBM Plex Mono', monospace;
-  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --content: 1280px;
 }
-
-/* LIGHT — cool & technical */
 html[data-theme="light"] {
   --bg: #E4E8ED; --panel: #F5F7F9; --ink: #1E2733; --ink-dim: #5B6774;
-  --accent: #3E6E8E; --accent-2: #8C5A3C; --line: rgba(30,39,51,0.14);
+  --accent: #3E6E8E; --accent-2: #8C5A3C; --line: rgba(30,39,51,0.16);
   --card-ink: #1E2733; --btn-ink: #F5F7F9;
 }
-
-/* DARK — bold high-contrast */
 html[data-theme="dark"] {
-  --bg: #0B0B0C; --panel: #141416; --ink: #F5F3EE; --ink-dim: #8C8B87;
-  --accent: #00C2FF; --accent-2: #E8B23D; --line: rgba(245,243,238,0.14);
+  --bg: #0B0B0C; --panel: #141416; --ink: #F5F3EE; --ink-dim: #AAA9A5;
+  --accent: #00C2FF; --accent-2: #E8B23D; --line: rgba(245,243,238,0.16);
   --card-ink: #F5F3EE; --btn-ink: #0B0B0C;
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
-  min-height: 100vh;
-}
-
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); min-height: 100vh; }
 a { color: inherit; }
-
+img { max-width: 100%; }
+.container { width: min(var(--content), calc(100% - 40px)); margin-inline: auto; }
 .topbar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 20px clamp(20px, 6vw, 64px); border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  width: min(var(--content), calc(100% - 40px)); margin-inline: auto; padding: 20px 0;
+  border-bottom: 1px solid var(--line);
 }
-.topbar .logo { font-family: var(--font-tech); font-weight: 600; font-size: 15px; letter-spacing: 0.04em; text-decoration:none; }
-.topbar nav { display: flex; align-items: center; gap: 26px; }
+.logo { font-family: var(--font-tech); font-weight: 700; font-size: 15px; letter-spacing: .06em; text-decoration: none; }
+.topbar nav { display: flex; align-items: center; gap: clamp(14px, 3vw, 28px); }
 .topbar nav a {
-  font-family: var(--font-tech); font-size: 12.5px; letter-spacing: 0.05em;
-  text-transform: uppercase; color: var(--ink-dim); text-decoration: none;
-  border-bottom: 1px solid transparent; padding-bottom: 2px;
+  font-family: var(--font-tech); font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid transparent; padding: 5px 0;
 }
 .topbar nav a:hover, .topbar nav a.current { color: var(--ink); border-color: var(--accent); }
-.topbar .cta {
-  font-family: var(--font-tech); font-size: 12px; letter-spacing: 0.04em;
-  text-transform: uppercase; padding: 9px 16px; border-radius: 8px;
-  background: var(--accent); color: var(--btn-ink); text-decoration: none;
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.theme-toggle, .top-cta {
+  font-family: var(--font-tech); font-size: 11px; letter-spacing: .05em; text-transform: uppercase;
+  border-radius: 999px; white-space: nowrap;
 }
-.theme-toggle {
-  font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.05em;
-  text-transform: uppercase; padding: 7px 12px; border-radius: 999px;
-  border: 1px solid var(--line); background: transparent; color: var(--ink-dim); cursor: pointer;
-}
-
-.eyebrow {
-  font-family: var(--font-tech); letter-spacing: 0.16em; text-transform: uppercase;
-  font-size: 11.5px; color: var(--accent); margin-bottom: 10px;
-}
+.theme-toggle { padding: 8px 12px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.top-cta { padding: 10px 16px; background: var(--accent); color: var(--btn-ink); text-decoration: none; font-weight: 700; }
+.eyebrow { font-family: var(--font-tech); letter-spacing: .16em; text-transform: uppercase; font-size: 11px; color: var(--accent); margin-bottom: 12px; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
-
-.wrap { padding: 0 clamp(20px, 6vw, 64px); }
-
-.gh-cta, .primary-cta {
-  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-tech);
-  font-size: 13px; text-decoration: none; padding: 13px 22px; border-radius: 10px;
-  background: var(--accent); color: var(--btn-ink); font-weight: 600;
+p { color: var(--ink-dim); }
+.button-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.button {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 11px 19px;
+  border-radius: 10px; font-family: var(--font-tech); font-size: 12.5px; font-weight: 700; text-decoration: none;
 }
-.secondary-cta {
-  display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-tech);
-  font-size: 13px; text-decoration: none; padding: 12px 20px; border-radius: 10px;
-  border: 1px solid var(--line); color: var(--ink);
+.button.primary { background: var(--accent); color: var(--btn-ink); }
+.button.secondary { border: 1px solid var(--line); color: var(--ink); }
+.button.disabled { opacity: .65; cursor: not-allowed; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.site-footer { margin-top: 72px; border-top: 1px solid var(--line); }
+.footer-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; padding: 34px 0 42px; }
+.footer-name { font-family: var(--font-tech); font-weight: 700; margin-bottom: 7px; }
+.footer-tagline, .footer-note { font-size: 13px; line-height: 1.6; }
+.footer-note { margin-top: 10px; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; align-content: start; gap: 12px 20px; }
+.footer-links a, .footer-links span { font-family: var(--font-tech); font-size: 12px; }
+.footer-links a { color: var(--accent); }
+.footer-links .disabled { color: var(--ink-dim); }
+.anchor-target { scroll-margin-top: 24px; }
+@media (max-width: 820px) {
+  .topbar { flex-wrap: wrap; }
+  .topbar nav { order: 3; width: 100%; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 12px; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-links { justify-content: flex-start; }
 }
-
-.note { font-size: 12.5px; color: var(--ink-dim); line-height: 1.5; }
-
-</style>
-<style>
-  .hero {
-    display: grid; grid-template-columns: 1.1fr 1.4fr; gap: 40px;
-    align-items: end; padding: 56px clamp(20px, 6vw, 64px) 44px;
-  }
-  @media (max-width: 720px) { .hero { grid-template-columns: 1fr; } }
-
-  .headshot-slot {
-    justify-self: start; width: min(280px, 80vw);
-  }
-  .headshot-slot img { width: 100%; height: auto; display: block; }
-
-  h1.name { font-size: clamp(34px, 6vw, 54px); line-height: 1.05; margin-bottom: 10px; }
-  .tagline { color: var(--ink-dim); font-size: 15.5px; max-width: 46ch; line-height: 1.55; }
-
-  .about-section {
-    max-width: 76ch; padding: 0 clamp(20px, 6vw, 64px) 48px;
-  }
-  .about-section h2, .professional-links h2 {
-    font-size: clamp(24px, 3vw, 32px); margin-bottom: 18px;
-  }
-  .about-section p {
-    font-size: 14.5px; line-height: 1.75; color: var(--ink-dim); margin-bottom: 16px;
-  }
-  .about-section p:last-child { margin-bottom: 0; }
-
-  .professional-links { padding: 0 clamp(20px, 6vw, 64px) 48px; }
-  .professional-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px;
-  }
-  .professional-card {
-    display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
-    border: 1px solid var(--line); border-radius: 14px; padding: 22px; background: var(--panel);
-  }
-  .professional-card p { color: var(--ink-dim); font-size: 13.5px; line-height: 1.6; flex: 1; }
-  .professional-link {
-    display: inline-flex; padding: 11px 18px; border-radius: 9px; font-family: var(--font-tech);
-    font-size: 12.5px; font-weight: 600; text-decoration: none;
-  }
-  .professional-link.primary-link { background: var(--accent); color: var(--btn-ink); }
-  .professional-link.secondary-link { border: 1px solid var(--line); color: var(--ink); }
-  .professional-link.is-placeholder { opacity: 0.7; cursor: not-allowed; }
-  @media (max-width: 720px) { .professional-grid { grid-template-columns: 1fr; } }
-
-  .doors {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-    padding: 0 clamp(20px, 6vw, 64px) 72px;
-  }
-  @media (max-width: 720px) { .doors { grid-template-columns: 1fr; } }
-
-  .door {
-    display: block; text-decoration: none; color: var(--card-ink);
-    border: 1px solid var(--line); border-radius: 16px; padding: 30px;
-    background: var(--panel); transition: transform 0.15s ease, border-color 0.15s ease;
-  }
-  .door:hover { transform: translateY(-3px); border-color: var(--accent); }
-  .door:focus-visible, .professional-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  .door .door-tag {
-    font-family: var(--font-tech); font-size: 11px; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
-  }
-  .door h2 { font-family: var(--font-tech); font-size: 22px; margin-bottom: 8px; }
-  .door p { font-size: 13.5px; color: var(--ink-dim); line-height: 1.5; margin-bottom: 16px; }
-  .door .go { font-family: var(--font-tech); font-size: 12.5px; color: var(--accent); }
-</style>
-</head>
-<body>
-
-  <div class="topbar">
-    <a class="logo" href="index.html">D. WARE</a>
-    <nav>
-      <a href="index.html" class="current">Home</a>
-      <a href="tech.html">Tech</a>
-      <a href="insurance.html">Insurance</a>
-    </nav>
-    <div style="display:flex; gap:10px; align-items:center;">
-      <button class="theme-toggle" onclick="toggleTheme()">Dark mode</button>
-      <a class="cta" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener">Book a call</a>
-    </div>
-  </div>
-
-  <div class="hero">
-    <div class="headshot-slot"><img src="images/headshot.png" alt="Deja Ware"></div>
-    <div class="hero-text">
-      <div class="eyebrow">Deja Ware</div>
-      <h1 class="name">D. Ware</h1>
-      <p class="tagline">Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions.</p>
-    </div>
-  </div>
-
-  <section class="about-section" aria-labelledby="about-heading">
-    <h2 id="about-heading">About Me</h2>
-    <p>I’m Deja Ware, but most people call me D. I’m a computer science student, cybersecurity professional, licensed insurance agent, and emerging entrepreneur who genuinely enjoys helping people feel more informed, prepared, and protected.</p>
-    <p>Cybersecurity is at the center of what I do. I am interested in securing systems, identifying risks early, and creating solutions that protect the people who depend on technology every day. That same mindset carries into my work in insurance, where I help individuals and families understand their options, prepare for the unexpected, and make confident decisions about their future.</p>
-    <p>My work also reflects my interest in leadership, education, entrepreneurship, and innovation. I believe valuable ideas can come from anywhere when we are willing to look closely, question what already exists, and think creatively about how things could work better.</p>
-    <p>Although my interests may appear in different forms, they are connected by one purpose: protecting what matters, solving important problems, and using what I learn to create opportunities for others.</p>
+@media (max-width: 480px) {
+  .container, .topbar { width: min(100% - 28px, var(--content)); }
+  .topbar { gap: 14px; }
+  .topbar nav { gap: 10px; }
+  .topbar nav a { font-size: 10.5px; }
+  .top-cta { display: none; }
+  .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+.hero { display: grid; grid-template-columns: minmax(300px, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(36px, 7vw, 96px); padding: 64px 0 54px; }
+.hero-photo { display: flex; justify-content: center; align-items: end; min-height: 440px; }
+.hero-photo img { width: min(430px, 100%); max-height: 540px; object-fit: contain; object-position: center bottom; }
+.hero-copy { max-width: 680px; }
+.hero-copy .legal-name { font-family: var(--font-tech); font-size: 13px; letter-spacing: .18em; color: var(--accent); margin-bottom: 10px; }
+.hero-copy h1 { font-size: clamp(44px, 7vw, 76px); line-height: 1; margin-bottom: 20px; }
+.hero-tagline { font-size: clamp(18px, 2.2vw, 25px); color: var(--ink); line-height: 1.45; max-width: 28ch; }
+.hero-intro { font-size: 14.5px; line-height: 1.7; max-width: 60ch; margin: 18px 0 26px; }
+.doors { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 18px 0 76px; }
+.door { display: flex; flex-direction: column; min-height: 240px; padding: 30px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); text-decoration: none; transition: transform .15s ease, border-color .15s ease; }
+.door:hover { transform: translateY(-3px); border-color: var(--accent); }
+.door .door-tag { font-family: var(--font-tech); font-size: 10.5px; letter-spacing: .1em; color: var(--accent); margin-bottom: 14px; }
+.door h2 { font-size: 30px; margin-bottom: 12px; }
+.door p { font-size: 14px; line-height: 1.65; max-width: 58ch; flex: 1; }
+.door .go { margin-top: 20px; font-family: var(--font-tech); font-size: 12px; color: var(--accent); font-weight: 700; }
+.about-section { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: clamp(40px, 8vw, 110px); padding: 76px 0; border-top: 1px solid var(--line); }
+.about-heading h2, .professional-section h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 14px; }
+.about-heading p { font-size: 16px; line-height: 1.65; max-width: 34ch; }
+.about-copy { max-width: 76ch; }
+.about-copy p { font-size: 15px; line-height: 1.8; margin-bottom: 17px; }
+.about-copy p:last-child { margin-bottom: 0; }
+.professional-section { padding: 76px 0; }
+.professional-section > p { font-size: 14px; margin-bottom: 26px; }
+.professional-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.professional-card { display: flex; flex-direction: column; min-height: 230px; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+.professional-card.primary-resource { min-height: 255px; border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.professional-card h3 { font-size: 23px; margin-bottom: 10px; }
+.professional-card p { font-size: 13.5px; line-height: 1.65; flex: 1; }
+.professional-card .button { align-self: flex-start; margin-top: 18px; }
+.quote-section { padding: 80px 0 38px; border-top: 1px solid var(--line); }
+.quote-section blockquote { max-width: 1040px; font-family: var(--font-display); font-size: clamp(27px, 4.2vw, 48px); line-height: 1.35; }
+.quote-section cite { display: block; margin-top: 20px; font-family: var(--font-tech); font-size: 13px; color: var(--ink-dim); font-style: normal; }
+@media (max-width: 820px) { .hero, .about-section { grid-template-columns: 1fr; } .hero { gap: 20px; padding-top: 42px; } .hero-photo { min-height: 340px; } .hero-photo img { max-height: 430px; } .doors, .professional-grid { grid-template-columns: 1fr; } .about-section { gap: 26px; } }
+</style></head><body>
+<header class="topbar">
+  <a class="logo" href="index.html">D. WARE</a>
+  <nav aria-label="Primary navigation">
+    <a href="index.html" class="current">Home</a><a href="index.html#about">About</a><a href="tech.html">Tech</a><a href="insurance.html">Insurance</a>
+  </nav>
+  <div class="nav-actions"><button class="theme-toggle" type="button" onclick="toggleTheme()">Dark mode</button><a class="top-cta" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener noreferrer">Book a Call</a></div>
+</header>
+<main class="container">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-photo"><img src="images/headshot.png" alt="Deja Ware wearing a black suit and tie"></div>
+    <div class="hero-copy"><div class="legal-name">DEJA WARE</div><h1 id="hero-title">D. Ware</h1><p class="hero-tagline">Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions.</p><p class="hero-intro">I bring a security-focused mindset to technical work, family preparation, leadership, and the ideas I continue to build.</p><div class="button-row"><a class="button primary" href="#work">Explore My Work</a><a class="button secondary" href="#about">About Me</a></div></div>
   </section>
-
-  <section class="professional-links" aria-labelledby="professional-links-heading">
-    <h2 id="professional-links-heading">Learn More About My Work</h2>
+  <section class="doors anchor-target" id="work" aria-label="Explore my work">
+    <a class="door" href="tech.html"><div class="door-tag">CYBERSECURITY &amp; TECHNOLOGY</div><h2>Tech</h2><p>See how cybersecurity connects my work in software, monitoring, research, cloud technology, robotics, and emerging technology.</p><div class="go">Explore Tech &rarr;</div></a>
+    <a class="door" href="insurance.html"><div class="door-tag">INSURANCE &amp; PLANNING</div><h2>Insurance</h2><p>Learn about coverage options, preparation resources, and ways to make informed decisions for yourself and your family.</p><div class="go">Explore Insurance &rarr;</div></a>
+  </section>
+  <section class="about-section anchor-target" id="about" aria-labelledby="about-title">
+    <div class="about-heading"><div class="eyebrow">About</div><h2 id="about-title">About Me</h2><p>Cybersecurity is my foundation, but service, leadership, entrepreneurship, and education shape how I use it.</p></div>
+    <div class="about-copy"><p>I&rsquo;m Deja Ware, but most people call me D. I&rsquo;m a computer science student, cybersecurity professional, licensed insurance agent, and emerging entrepreneur who genuinely enjoys helping people feel more informed, prepared, and protected.</p><p>Cybersecurity is at the center of what I do. I am interested in securing systems, identifying risks early, and creating solutions that protect the people who depend on technology every day. That same mindset carries into my work in insurance, where I help individuals and families understand their options, prepare for the unexpected, and make confident decisions about their future.</p><p>My work also reflects my interest in leadership, education, entrepreneurship, and innovation. I believe valuable ideas can come from anywhere when we are willing to look closely, question what already exists, and think creatively about how things could work better.</p><p>Although my interests may appear in different forms, they are connected by one purpose: protecting what matters, solving important problems, and using what I learn to create opportunities for others.</p></div>
+  </section>
+  <section class="professional-section" aria-labelledby="professional-title"><div class="eyebrow">Professional Links</div><h2 id="professional-title">Learn More About My Work</h2><p>Choose the resource that best fits what you would like to learn.</p>
     <div class="professional-grid">
-      <article class="professional-card">
-        <h3>LinkedIn</h3>
-        <p>Visit my LinkedIn to follow my professional journey, current roles, certifications, leadership experience, and the projects I am continuing to build.</p>
-        <!-- TODO: Replace with [INSERT LINKEDIN URL]. -->
-        <span class="professional-link primary-link is-placeholder" aria-disabled="true" data-placeholder="[INSERT LINKEDIN URL]">View LinkedIn</span>
-      </article>
-      <article class="professional-card">
-        <h3>Resume</h3>
-        <p>View my resume for a complete overview of my technical skills, professional experience, education, certifications, leadership, and accomplishments.</p>
-        <!-- TODO: Replace with [INSERT RESUME FILE OR URL] and use target="_blank". -->
-        <span class="professional-link secondary-link is-placeholder" aria-disabled="true" data-placeholder="[INSERT RESUME FILE OR URL]">View Resume</span>
-      </article>
+      <article class="professional-card primary-resource"><h3>LinkedIn</h3><p>Follow my professional journey, current roles, certifications, leadership experience, accomplishments, and the projects I am continuing to build.</p><a class="button primary" href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">View LinkedIn</a></article>
+      <article class="professional-card primary-resource"><h3>Resume</h3><p>View a structured overview of my technical skills, professional experience, education, certifications, leadership, and accomplishments.</p><!-- TODO: Replace with [INSERT RESUME FILE OR PUBLIC VIEW URL]. --><span class="button secondary disabled" aria-disabled="true">View Resume</span></article>
+      <article class="professional-card"><h3>GitHub</h3><p>Explore my repositories, technical projects, experiments, coursework, and ongoing development work.</p><a class="button secondary" href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">View GitHub</a></article>
+      <article class="professional-card"><h3>Professional Instagram</h3><p>Follow my student work, technology, leadership, insurance, professional development, and career updates.</p><a class="button secondary" href="https://www.instagram.com/dwarelhq_" target="_blank" rel="noopener noreferrer">View Instagram</a></article>
     </div>
   </section>
-
-  <div class="doors">
-    <a class="door" href="tech.html">
-      <div class="door-tag">Cybersecurity &amp; Technology</div>
-      <h2>Tech</h2>
-      <p>See how cybersecurity connects my work in software, monitoring, research, and emerging technology.</p>
-      <div class="go">Enter &rarr;</div>
-    </a>
-    <a class="door" href="insurance.html">
-      <div class="door-tag">Insurance &amp; Planning</div>
-      <h2>Insurance</h2>
-      <p>Learn about coverage options, preparation resources, and ways to make informed decisions for your family.</p>
-      <div class="go">Enter &rarr;</div>
-    </a>
+  <section class="quote-section" aria-label="Closing quotation"><blockquote>Don&rsquo;t let anyone rob you of your imagination, your creativity, or your curiosity. It&rsquo;s your place in the world; it&rsquo;s your life. Go on and do all you can with it, and make it the life you want to live.</blockquote><cite>Mae Jemison</cite></section>
+</main><footer class="site-footer">
+  <div class="container footer-inner">
+    <div><div class="footer-name">D. Ware</div><p class="footer-tagline">Cybersecurity &bull; Technology &bull; Insurance &bull; Leadership</p><p class="footer-note">Tap, scan, or visit this site to connect.</p><!-- TODO: Add [INSERT FINAL PORTFOLIO URL] when published. --></div>
+    <div class="footer-links"><a href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/dwarelhq_" target="_blank" rel="noopener noreferrer">Instagram</a><span class="disabled" aria-disabled="true">Resume</span></div>
   </div>
-
-<script>
-  function toggleTheme(){
+</footer><script>
+  function toggleTheme() {
     const html = document.documentElement;
     const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', next);
@@ -230,14 +163,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
     document.querySelector('.theme-toggle').textContent = next === 'light' ? 'Dark mode' : 'Light mode';
   }
   const savedTheme = localStorage.getItem('theme');
-  const initialTheme = savedTheme ||
-    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.setAttribute('data-theme', initialTheme);
   window.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.theme-toggle').textContent =
-      initialTheme === 'light' ? 'Dark mode' : 'Light mode';
+    document.querySelector('.theme-toggle').textContent = initialTheme === 'light' ? 'Dark mode' : 'Light mode';
   });
-</script>
-
-</body>
-</html>
+</script></body></html>
