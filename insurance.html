@@ -106,18 +106,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 @media (max-width: 700px) { .benefit-grid { grid-template-columns: 1fr; } .benefit-card { min-height: 0; } .final-booking { align-items: flex-start; flex-direction: column; } }
 
 /* High-visibility insurance actions */
-.top-cta#book-now { padding: 14px 24px; border-radius: 10px; background: var(--accent); color: var(--btn-ink); font-size: 13px; box-shadow: 0 8px 24px rgba(0,194,255,.22); }
 .insurance-book-main { min-width: 250px; min-height: 58px; padding: 16px 32px; font-size: 14px; box-shadow: 0 10px 28px rgba(0,194,255,.26); }
 .insurance-copy .button.secondary { border-color: var(--accent); background: transparent; color: var(--ink); }
 .final-booking .button.secondary { border-color: var(--accent-2); background: var(--accent-2); color: #fff; }
-.insurance-book-main:hover, .insurance-copy .button.secondary:hover, .final-booking .button.secondary:hover, .top-cta#book-now:hover { filter: brightness(1.08); transform: translateY(-1px); }
-@media (max-width: 480px) { .top-cta#book-now { display: inline-flex; padding: 11px 15px; font-size: 11px; } }
+.insurance-book-main:hover, .insurance-copy .button.secondary:hover, .final-booking .button.secondary:hover { filter: brightness(1.08); transform: translateY(-1px); }
 </style></head><body><header class="topbar">
   <a class="logo" href="index.html">D. WARE</a>
   <nav aria-label="Primary navigation">
     <a href="index.html">Home</a><a href="about.html">About</a><a href="tech.html">Tech</a><a href="insurance.html" class="current">Insurance</a>
   </nav>
-  <div class="nav-actions"><button class="theme-toggle" type="button" onclick="toggleTheme()">Dark mode</button><a class="top-cta" id="book-now" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener noreferrer">Book Now</a></div>
+  <div class="nav-actions"><button class="theme-toggle" type="button" onclick="toggleTheme()">Dark mode</button></div>
 </header><main class="container">
 <section class="insurance-top"><div class="insurance-copy"><div class="eyebrow">INSURANCE &amp; PLANNING</div><h1>Explore options that can help you prepare for the future.</h1><p>In a no-cost, no-obligation conversation, I&rsquo;ll help you review what options may be available based on your individual needs and eligibility. My goal is to explain the information clearly so you can make an informed decision without pressure.</p><div class="button-row"><a class="button primary insurance-book-main" id="main-booking" href="https://calendly.com/dware-zuzick" target="_blank" rel="noopener noreferrer">Book Now</a><a class="button secondary" href="#resources">What We Can Review</a></div><p class="direct-note">If my calendar is full, reach out directly by text, phone, or email and I will help find another time.</p></div>
 <aside class="booking-card"><h2>Before You Book</h2><div class="faq-item"><h3>Does the consultation cost anything?</h3><p>No. There is no cost or obligation for the consultation. Availability and eligibility for specific resources or benefits may vary.</p></div><div class="faq-item"><h3>Am I obligated to purchase coverage?</h3><p>No. The conversation is an opportunity to understand your options and decide what, if anything, fits your needs.</p></div><div class="faq-item"><h3>What happens during the call?</h3><p>I&rsquo;ll ask a few questions about your situation, review options that may be available, and answer your questions in clear language.</p></div></aside></section>
