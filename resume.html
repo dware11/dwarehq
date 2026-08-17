@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D. Ware | Cybersecurity, Technology &amp; Insurance</title>
-<meta name="description" content="Deja D. Ware brings together cybersecurity, technology, insurance, leadership, and service in one professional home.">
-<meta property="og:type" content="website"><meta property="og:title" content="D. Ware | Cybersecurity, Technology &amp; Insurance"><meta property="og:description" content="Combining cybersecurity, technology, and insurance to protect systems, support families, and help people make informed decisions."><meta property="og:image" content="images/headshot.png"><meta property="og:image:alt" content="Portrait of Deja Ware">
-<!-- TODO: Add canonical URL using [INSERT FINAL PORTFOLIO URL]. --><!-- TODO: Replace the headshot with [INSERT SOCIAL PREVIEW IMAGE] when available. -->
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><style>/* Shared visual system */
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Resume | D. Ware</title><meta name="description" content="View Deja Ware's cybersecurity resume in the browser."><meta property="og:type" content="website"><meta property="og:title" content="Resume | D. Ware"><meta property="og:description" content="View Deja Ware's technical skills, education, certifications, leadership, and experience."><link rel="icon" href="favicon.svg" type="image/svg+xml"><style>/* Shared visual system */
 :root {
   --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
   --font-tech: 'Space Grotesk', 'IBM Plex Mono', monospace;
@@ -144,33 +138,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .door-points { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 2px; list-style: none; }
 .door-points li { padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-dim); font-family: var(--font-tech); font-size: 10px; }
 @media (max-width: 720px) { .home-hero { min-height: 500px; padding: 18px; background-position: 57% center; } .home-hero-copy { padding: 24px; } }
-</style></head><body>
-<header class="topbar">
+
+.resume-header { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding: 48px 0 22px; }
+.resume-header h1 { font-size: clamp(38px, 6vw, 64px); margin-bottom: 8px; }
+.resume-header p { font-size: 14px; line-height: 1.6; }
+.resume-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.resume-viewer { width: 100%; height: min(82vh, 980px); min-height: 680px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+@media (max-width: 700px) { .resume-header { align-items: flex-start; flex-direction: column; } .resume-viewer { min-height: 620px; } }
+</style></head><body><header class="topbar">
   <a class="logo" href="index.html">D. WARE</a>
   <nav aria-label="Primary navigation">
-    <a href="index.html" class="current">Home</a><a href="about.html">About</a><a href="tech.html">Tech</a><a href="insurance.html">Insurance</a>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="tech.html">Tech</a><a href="insurance.html">Insurance</a>
   </nav>
   <div class="nav-actions"><button class="theme-toggle" type="button" onclick="toggleTheme()">Dark mode</button></div>
-</header>
-<main class="container">
-  <section class="home-hero" aria-labelledby="hero-title">
-    <div class="home-hero-copy"><div class="legal-name">DEJA WARE</div><h1 id="hero-title">One Mindset. Many Ways to Serve.</h1><p class="hero-tagline">Cybersecurity, technology, and insurance come together here through preparation, clear guidance, and practical problem-solving.</p><p class="hero-intro">Explore how I am building safer systems, strengthening my technical skills, and helping families understand the options available to them.</p><div class="button-row"><a class="button primary" href="#work">Explore My Work</a><a class="button secondary" href="about.html">Meet D</a></div></div>
-  </section>
-  <section class="doors anchor-target" id="work" aria-label="Explore my work">
-    <a class="door" href="tech.html"><div class="door-tag">CYBERSECURITY &amp; TECHNOLOGY</div><h2>Tech</h2><p>See how I am developing in security through certifications, hands-on learning, and portfolio projects.</p><ul class="door-points"><li>Cybersecurity</li><li>Certifications</li><li>Portfolio Projects</li></ul><div class="go">Explore Tech &rarr;</div></a>
-    <a class="door" href="insurance.html"><div class="door-tag">INSURANCE &amp; PLANNING</div><h2>Insurance</h2><p>See how I help families review protection, preparation resources, and their next steps without pressure.</p><ul class="door-points"><li>Family Protection</li><li>Planning Resources</li><li>Clear Guidance</li></ul><div class="go">Explore Insurance &rarr;</div></a>
-  </section>
-
-  <section class="professional-section" aria-labelledby="professional-title"><div class="eyebrow">Professional Links</div><h2 id="professional-title">Learn More About My Work</h2><p>Choose the resource that best fits what you would like to learn.</p>
-    <div class="professional-grid">
-      <article class="professional-card primary-resource"><h3>LinkedIn</h3><p>Follow my professional journey, current roles, certifications, leadership experience, accomplishments, and the projects I am continuing to build.</p><a class="button primary" href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">View LinkedIn</a></article>
-      <article class="professional-card primary-resource"><h3>Resume</h3><p>View a structured overview of my technical skills, professional experience, education, certifications, leadership, and accomplishments.</p><a class="button primary" href="resume.html">View Resume</a></article>
-      <article class="professional-card"><h3>GitHub</h3><p>Explore my repositories, technical projects, experiments, coursework, and ongoing development work.</p><a class="button primary" href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">View GitHub</a></article>
-
-    </div>
-  </section>
-  <section class="quote-section" aria-label="Closing quotation"><blockquote>&ldquo;Don&rsquo;t let anyone rob you of your imagination, your creativity, or your curiosity. It&rsquo;s your place in the world; it&rsquo;s your life. Go on and do all you can with it, and make it the life you want to live.&rdquo;</blockquote><cite><strong>Mae Jemison</strong><span>Engineer, physician, and former NASA astronaut</span></cite></section>
-</main><footer class="site-footer">
+</header><main class="container"><section class="resume-header"><div><div class="eyebrow">PROFESSIONAL RESUME</div><h1>Deja Ware</h1><p>Review my current cybersecurity resume directly in your browser.</p></div><div class="resume-actions"><a class="button primary" href="assets/Deja_Ware_Cyber_Resume.pdf" target="_blank" rel="noopener noreferrer">Open Full PDF</a><a class="button secondary" href="index.html">Back Home</a></div></section><iframe class="resume-viewer" src="assets/Deja_Ware_Cyber_Resume.pdf#view=FitH" title="Deja Ware cybersecurity resume"><p>Your browser cannot display this PDF. <a href="assets/Deja_Ware_Cyber_Resume.pdf">Open the resume PDF</a>.</p></iframe></main><footer class="site-footer">
   <div class="container footer-inner">
     <div><div class="footer-name">D. Ware</div><p class="footer-tagline">Cybersecurity &bull; Technology &bull; Insurance &bull; Leadership</p><p class="footer-note">Tap, scan, or visit this site to connect.</p><!-- TODO: Add [INSERT FINAL PORTFOLIO URL] when published. --></div>
     <div class="footer-links"><a href="https://www.linkedin.com/in/ware-deja42" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">GitHub</a><a href="resume.html">Resume</a></div>
