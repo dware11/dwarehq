@@ -90,8 +90,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .section-heading { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 24px; }
 .section-heading h2 { font-size: clamp(30px, 4vw, 44px); }
 .section-heading p { font-size: 13.5px; max-width: 54ch; line-height: 1.6; }
-.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.work-card { display: flex; flex-direction: column; min-height: 330px; padding: 23px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.work-card { display: flex; flex-direction: column; min-height: 250px; padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
 .work-card.flagship { border-top: 3px solid var(--accent); }
 .work-tag { align-self: flex-start; padding: 4px 9px; border: 1px solid currentColor; border-radius: 999px; font-family: var(--font-tech); font-size: 10px; letter-spacing: .06em; color: var(--accent); margin-bottom: 16px; }
 .work-card.planned .work-tag { color: var(--accent-2); }
@@ -132,7 +132,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 <section class="projects-section" aria-labelledby="projects-title"><div class="section-heading"><div><div class="eyebrow">Selected Projects</div><h2 id="projects-title">Featured Projects</h2></div><p>A selection of community-focused technology, software development, and cybersecurity work.</p></div><div class="work-grid">
 <article class="work-card"><span class="work-tag">Hackathon Project</span><h3>AskPV</h3><p>A collaborative hackathon project focused on improving access to useful guidance and information for the Prairie View community.</p><a class="button secondary" href="https://github.com/rklinton/pv-wise-guide" target="_blank" rel="noopener noreferrer">View Repository</a></article>
 <article class="work-card flagship"><span class="work-tag">Flagship Project</span><h3>FLARE</h3><p>Explore the public repository to see the project and its current implementation.</p><a class="button secondary" href="https://github.com/dware11/FLARE" target="_blank" rel="noopener noreferrer">View Repository</a></article>
-<article class="work-card planned"><span class="work-tag">In Development</span><h3>Endpoint / DLP Monitor</h3><p>A file-integrity and change-monitoring project currently in development for clearer local activity logs.</p><div class="project-meta"><div><strong>Status:</strong> In development</div></div></article>
+
 </div></section>
 <section class="github-cta"><div><h2>Explore More of My Technical Work</h2><p>Visit my GitHub to see additional repositories, coursework, experiments, and projects as they continue to develop.</p></div><a class="button primary" href="https://github.com/dware11" target="_blank" rel="noopener noreferrer">Explore More Projects on GitHub</a></section>
 </main><footer class="site-footer">
